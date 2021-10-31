@@ -16,6 +16,18 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 call plug#end()
 
+"""COC.NVIM KEYBINDINGS AND SETTINGS"""
+" Remap keys for applying codeAction to the current line.
+nmap <leader>ca  <Plug>(coc-codeaction)
+" " Apply AutoFix to problem on the current line.
+nmap <leader>fi  <Plug>(coc-fix-current)"
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+let g:coc_global_extensions = ['coc-clangd']
+
 
 command! TexMode :echomsg "Starting Plugins. Standby"
 
